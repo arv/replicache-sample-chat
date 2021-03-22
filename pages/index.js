@@ -1,4 +1,11 @@
 import Head from 'next/head'
+import Replicache from "replicache";
+
+const rep = new Replicache({
+  pushURL: "/api/replicache-push",
+  pullURL: "/api/replicache-pull",
+  wasmModule: "/replicache.dev.wasm",
+});
 
 export default function Home() {
   return (
